@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "aoclient.h"
 #include "msclient.h"
 
 #include <QMainWindow>
@@ -22,10 +23,12 @@ public slots:
     void serverData(QString server);
     void clearServerList();
     void populateServerInfo(QListWidgetItem *item);
+    void updatePlayerCount(int current, int max);
 
 private:
     Ui::MainWindow *ui;
 
+    AOClient* ao_client;
     MSClient* ms_client;
     struct ServerInfo {
         QString description;

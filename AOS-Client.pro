@@ -20,12 +20,14 @@ OBJECTS_DIR = $$PWD/build
 MOC_DIR = $$PWD/build
 
 SOURCES += \
+    aoclient.cpp \
     aopacket.cpp \
     main.cpp \
     mainwindow.cpp \
     msclient.cpp
 
 HEADERS += \
+    aoclient.h \
     aopacket.h \
     mainwindow.h \
     msclient.h

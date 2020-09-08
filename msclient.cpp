@@ -26,7 +26,6 @@ void MSClient::readSocket()
 
     if (!ms_data.endsWith("%")) {
         partial_data += ms_data;
-        partial_data += "[[[BOUND]]]";
         is_partial = true;
         return;
     }
@@ -57,4 +56,9 @@ void MSClient::msConnected()
 void MSClient::msDisconnected()
 {
 
+}
+
+MSClient::~MSClient()
+{
+    socket->deleteLater();
 }

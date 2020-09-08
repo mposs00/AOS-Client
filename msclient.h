@@ -12,6 +12,7 @@ class MSClient : public QObject
     Q_OBJECT
 public:
     explicit MSClient(QObject *parent = nullptr);
+    ~MSClient();
 
 public slots:
     void msConnect();

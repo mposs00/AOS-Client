@@ -26,21 +26,32 @@
          <widget class="QListWidget" name="server_list"/>
         </item>
         <item>
-         <widget class="QTextBrowser" name="server_info"/>
+         <layout class="QVBoxLayout" name="server_info_container">
+          <item>
+           <widget class="QLabel" name="player_count">
+            <property name="text">
+             <string>Player Count:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextBrowser" name="server_info">
+            <property name="openExternalLinks">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
       <widget class="QWidget" name="courtroom_page">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QOpenGLWidget" name="viewport">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-         </widget>
+         <widget class="QGraphicsView" name="graphicsView"/>
         </item>
         <item>
          <layout class="QHBoxLayout" name="text_entry_container">
