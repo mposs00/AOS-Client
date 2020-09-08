@@ -4,6 +4,7 @@
 #include "msclient.h"
 
 #include <QMainWindow>
+#include <QListWidgetItem>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,6 +21,7 @@ public:
 public slots:
     void serverData(QString server);
     void clearServerList();
+    void populateServerInfo(QListWidgetItem *item);
 
 private:
     Ui::MainWindow *ui;

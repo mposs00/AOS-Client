@@ -34,6 +34,12 @@ void MainWindow::clearServerList()
     ui->server_list->clear();
 }
 
+void MainWindow::populateServerInfo(QListWidgetItem* item)
+{
+    QString server_name = item->text();
+    ui->server_info->setText(server_infos.value(server_name).description);
+}
+
 MainWindow::~MainWindow()
 {
     delete ui;

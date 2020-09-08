@@ -75,5 +75,25 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>server_list</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>populateServerInfo(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>793</x>
+     <y>281</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>populateServerInfo(QListWidgetItem*)</slot>
+ </slots>
 </ui>
